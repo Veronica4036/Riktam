@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>User Home</title>
+		<meta name="description" content="Border Animation Effect: Recreating the effect seen on carlphilippebrenner.com with SVG" />
+		<meta name="keywords" content="svg, border effect, animated border, line, grid item, hover, css" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+<style>
+
+
+	   *{
+	   	padding: 0px;
+	   	margin:0px;
+	   	box-sizing: border-box;
+	   }
+.navbar{
+	   	width: 100%;
+	   	padding: 20px;
+	   	position: fixed;
+	   	top: 0px;
+	   	text-align: center;
+	   	transition: .5s;
+	   }
+
+	   .navbar ul li{
+	   	list-style-type: none;
+	   	display:inline-block;
+	   	padding: 10px 50px;
+	   	color: white;
+	   	font-size: 20px;
+	   	font-family: sans-serif;
+	   	cursor: pointer;
+	   	border-radius:10px;
+	   	transition: .5s;
+	   }
+   
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+   background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+.raise {
+  --color: #FF00FF;
+  --hover: #e5ff60;
+}
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+a {
+  text-decoration:none;
+  color:#FFF;
+}
+
+</style>
+	<body>
+		 <div class="navbar" id='nav'>
+     <ul>
+   <div class="buttons">
+  
+  <li><button class="raise"><a href="home.html">Home</a></button></li>
+  <li><button class="raise"><a href="history.php">History</a></button></li>
+  <li><button class="raise"><a href="feedback.html">Feedback</a></button></li>
+  <li><button class="raise"><a href="http://localhost/Todo/logout.php">Logout</a></button></li>
+  
+</div>
+       </ul>
+</div>
+<br><br><br><br><br><br><br><br>
+			
+			<section class="demo-2">
+				
+				<div class="grid"><a href="picUpload.html">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+						</svg>
+						<h3>Report a Problem</h3>
+						<span>Upload a Pic <span>Be the Change.YOU want see in the world</span>
+					</div></a><a href="2.html">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+						</svg>
+						<h3>View the Issues</h3>
+						<span>Review the Issues <span>Upvote the issue if you think this needs to be taken strict action.</span>
+						
+					</div></a>
+					
+					</div></a>
+				</div><!-- /grid -->
+			</section>
+			
+			
+		</div><!-- /container -->
+	</body>
+</html>

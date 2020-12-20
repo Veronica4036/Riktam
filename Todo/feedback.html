@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Feedback</title>
+
+<style>
+body{
+background: url(pattern.jpg);
+color:white;
+}
+.box {
+  border: 3px solid #4EC6DE;
+  padding: 5px;
+  width: 800px;
+  height: 450px;
+  font-family:comic sans ms;
+  padding: 40px;
+margin: auto;
+}
+h1{
+color:sky blue;
+font-size:45px;
+text-shadow: 2px 2px 8px violet;}
+
+   a{
+color:white;
+text-decoration:none;
+}
+
+button {
+  background: none;
+  border: 2px solid orange;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+.raise {
+  --color: white;
+  --hover: white;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+ *{
+	   	padding: 0px;
+	   	margin:0px;
+	   	box-sizing: border-box;
+	   }
+
+	   .header{
+	   	 width: 100%;
+	   	 height: 100%;
+	   	 
+	   	 
+
+	   }
+
+	   .navbar{
+	   	width: 100%;
+	   	padding: 20px;
+	   	position: fixed;
+	   	top: 0px;
+	   	text-align: center;
+	   	transition: .5s;
+	   }
+
+	   .navbar ul li{
+	   	list-style-type: none;
+	   	display:inline-block;
+	   	padding: 10px 50px;
+	   	color: white;
+	   	font-size: 20px;
+	   	font-family: sans-serif;
+	   	cursor: pointer;
+	   	border-radius:10px;
+	   	transition: .5s;
+	   }
+th{text-align: center;
+     font-size:30px;}
+		
+.rating {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rating-input[required] {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+.rating-star[required]{
+    position: relative;
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('/samples/star-rating/star.png') 0 -16px;
+}
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+    background-position: 0 0;
+}
+.rating-star:hover,
+.rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+}
+
+
+
+
+
+.items #msg{
+    height: 100px;
+}
+.input-fields {
+    padding: 0 10px;
+}
+ 
+.input-fields .items{
+    width: 100%;
+    padding-bottom: 5px;
+} 
+.input-fields .items .text-area{
+    background: white;
+    border: 0;
+    border: 1px solid black;
+    width: 100%;
+    padding: 5px 8px;
+    font-size: 1em;
+    color: black;
+    border-radius: 3px;
+}
+.button1 {
+  position: relative;
+  background-color: green;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button2 {
+  position: relative;
+  background-color: red;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+   .rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+  
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #fff, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+	</style>
+</head>
+<body>
+<div class="header">
+	 
+	 <div class="navbar" id='nav'>
+
+       <ul>
+   <div class="buttons">
+  
+  <li><button class="raise"><a href="home.html"><b>Home</b></a></button></li>
+  <li><button class="raise"><a href="history.php"><b>History</b></a></button></li>
+  <li><button class="raise"><a href="feedback.html"><b>Feedback</b></a></button></li>
+  
+  <li><button class="raise"><a href="logout.php"><b>Logout</b></a></button></li>
+</div>
+       </ul>
+
+	 </div><br><br><br><br><br><br><br><br><br><br>
+<center>
+
+<form onsubmit="myFunction()">
+<div class="box">
+<h1>FEEDBACK</h1><br>
+
+<table >
+<tr><th>Any suggestions:</th>
+<th>
+<div class="input-fields">
+<div class="items">
+<input id="msg" class="text-area" required></textarea></div></div></th>
+</tr>
+<tr><th>Star Rating</th>
+<th>
+ <div class="rating">
+    
+    <input type="radio" id="star5" name="rating" value="5" required/><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" required /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" required/><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" required/><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" required/><label for="star1" title="Waste of time">1 star</label>
+</div>
+</th>
+</tr>
+
+</table>
+  
+<input type="submit" class="button1"></button>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button class="button2"><b>EXIT</b></button><br>
+</div>
+</form>
+</center>
+
+</body>
+<script>
+function myFunction() {
+  alert("Feedback Sent");
+}
+</script>
+</html>
